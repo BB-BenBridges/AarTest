@@ -1,7 +1,7 @@
 import { Button, Card, Container, Group, Image, Text } from "@mantine/core";
-import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { SignInButton } from "@clerk/nextjs";
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
@@ -30,21 +30,15 @@ export default function Login() {
               AarTemplate is only accesable to authenticated users. Please sign in
               to view your forms.
             </Text>
-
+            <SignInButton mode="modal">
             <Button
               fullWidth
               mt="md"
               radius="md"
-              onClick={() => {
-                setLoading(true);
-                signIn("azure-ad", {
-                  callbackUrl: callbackUrl ? (callbackUrl as string) : "/",
-                });
-              }}
-              loading={loading}
             >
               Sign In
             </Button>
+            </SignInButton>
             <Text mt={20} c="dimmed" size="xs" component='a' href="https://storyset.com/online">Online illustrations by Storyset</Text>
           </Card>
         </Group>
