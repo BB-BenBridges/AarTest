@@ -19,7 +19,6 @@ import NavFooterSettings from "./NavFooterSettings/NavFooterSettings";
 import SideNav from "./SideNav/SideNav";
 // import * as Sentry from "@sentry/nextjs";
 
-import { useEffect } from "react";
 import { useAuth, UserButton } from "@clerk/nextjs";
 
 export default function Nav({ children }: { children: React.ReactNode }) {

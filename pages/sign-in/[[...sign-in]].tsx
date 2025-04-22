@@ -1,12 +1,7 @@
 import { Button, Card, Container, Group, Image, Text } from "@mantine/core";
-import { useState } from "react";
-import { useRouter } from "next/router";
 import { SignInButton } from "@clerk/nextjs";
 
 export default function Login() {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const { callbackUrl } = router.query;
 
   return (
       <Container size="xl">

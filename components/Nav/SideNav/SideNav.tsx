@@ -3,12 +3,10 @@ import {
   IconHome2,
   IconDatabase,
   IconTruckDelivery,
-  IconUser,
   IconAddressBook,
   IconReceiptRefund,
   IconHelp,
   IconNotes,
-  IconFileArrowRight,
   IconCar
 } from "@tabler/icons-react";
 import classes from "./SideNav.module.css";
@@ -43,7 +41,7 @@ function NavbarLink({ icon: Icon, label, active, href }: NavbarLinkProps) {
 export default function SideNav() {
   const [active, setActive] = useState<number>();
   const router = useRouter();
-  const { isLoaded, user } = useUser();
+  const { user } = useUser();
   const [opened, { open, close }] = useDisclosure(false);
 
   const linkData = [

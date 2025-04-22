@@ -1,19 +1,17 @@
-import { Group, Title, ActionIcon } from "@mantine/core";
-import { IconHelp } from "@tabler/icons-react";
+import { Group, Title } from "@mantine/core";
+// import { IconHelp } from "@tabler/icons-react";
 
-import classes from "./PageTitle.module.css";
-import { Driver } from "driver.js";
+// import classes from "./PageTitle.module.css";
 
 interface Iprops {
   title: string;
-  driver?: Driver;
 }
 
-export default function PageTitle({ title, driver }: Iprops) {
+export default function PageTitle({ title }: Iprops) {
   return (
     <Group gap={3}>
       <Title order={2}>{title}</Title>
-      {driver && (
+      {/* {driver && (
         <ActionIcon
           variant="subtle"
           aria-label="Settings"
@@ -25,7 +23,7 @@ export default function PageTitle({ title, driver }: Iprops) {
             className={classes.icon}
           />
         </ActionIcon>
-      )}
+      )} */}
     </Group>
   );
 }
