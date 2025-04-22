@@ -1,0 +1,9 @@
+.icon {
+  @mixin dark {
+    color: var(--mantine-color-gray-text);
+  }
+
+  @mixin light {
+    color: var(--mantine-color-black);
+  }
+}
